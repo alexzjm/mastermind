@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mastermind</title>
+        <script src="myScript.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
+    </head>
+    <body>
+        <div> 
+            Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+        </div>
+        <button class="button1" id="show" onclick="tempShow()">SHOW</button>
+        <div class="description">
+            <h1>Welcome to Mastermind</h1>
+            <p>
+                Welcome to the classic code-breaking game that challenges your logic 
+                and deduction skills! In Mastermind, you will take on the role of the 
+                Code Breaker, striving to unveil the hidden sequence through a series 
+                of educated guesses.
+            </p>
+            <p>
+                You have a limited number of attempts to guess the secret code. After 
+                each guess, you will receive feedback in the form of small pegs:
+            </p>
+        </div>
+
+        <button class="button1" id='start' onclick="newGame()">START</button>
+        
+        <div class="content">
+            <button class="game-button" id='toggle' onclick="tempToggleAnswer()">SHOW/HIDE ANSWER</button>
+            <p class="game-text" id="answer"></p>
+        </div>
+
+        <div id="answer-container">
+            <p id="answer-label">Answer: </p>
+            <img class="circle-icon" src="images/circle0.png" alt="0" id="circle0"> 
+            <img class="circle-icon" src="images/circle1.png" alt="1" id="circle1">
+            <img class="circle-icon" src="images/circle2.png" alt="2" id="circle2">
+            <img class="circle-icon" src="images/circle3.png" alt="3" id="circle3">
+            <img class="circle-icon" src="images/circle4.png" alt="4" id="circle4">
+            <img class="circle-icon" src="images/circle5.png" alt="5" id="circle5">
+        </div>
+
+        <div class="answer-container"></div>
+
+        <div class="content">
+            <p class="game-text" id="feedback"></p>
+            <p class="game-text" id="feedback2"></p>
+            <p class="game-text" id="count">num of guesses: 0</p>
+            <input class="game-input" type="number" id="number1" placeholder="enter number">
+            <button class="button1" id='submit' onclick="makeGuess()">submit</button>
+            <p class="game-text" id="history"></p>
+            <p class="game-text" id="result"></p>
+        </div>
+
+        <div id="input-display"></div>
+
+        <div id="input-container">
+            <button id="ib0" onclick="getInput(0)"><img src="images/circle0.png" alt="0" class="image-buttons"></button>
+            <button id="ib1" onclick="getInput(1)"><img src="images/circle1.png" alt="1" class="image-buttons"></button>
+            <button id="ib2" onclick="getInput(2)"><img src="images/circle2.png" alt="2" class="image-buttons"></button>
+            <button id="ib3" onclick="getInput(3)"><img src="images/circle3.png" alt="3" class="image-buttons"></button>
+            <button id="ib4" onclick="getInput(4)"><img src="images/circle4.png" alt="4" class="image-buttons"></button>
+            <button id="ib5" onclick="getInput(5)"><img src="images/circle5.png" alt="5" class="image-buttons"></button>
+            <button id="ib6" onclick="getInput(6)"><img src="images/backspace.png" alt="redo" class="image-buttons"></button>
+            <button id="ib6" onclick="makeGuess()"><img src="images/enter.png" alt="guess" class="image-buttons"></button>
+        </div>
+
+        <div id="history-container"></div>
+    </body>
+</html>
